@@ -124,3 +124,46 @@ def string_compression(input_str):
 
 print(string_compression('aaabbbccccaaaa'))
 print(string_compression('aabbcc'))
+
+#1.7
+#Given an image by NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees
+
+#1.8
+#write a algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0
+def zero_matrix(matrix):
+	#matrix is in list of lists
+	a = 0
+	row_indexes = []
+	column_indexes = []
+	for row_index in range(len(matrix)):
+		for column_index in range(len(matrix[row_index])):
+			if 0 == matrix[row_index][column_index]:
+				row_indexes.append(row_index)
+				column_indexes.append(column_index)
+
+	for index in range(len(matrix)):
+		if index in row_indexes:
+			matrix[index] = [0] * len(matrix[index])
+		else:
+			for cindex in column_indexes:
+				matrix[index][cindex] = 0
+
+	return matrix
+
+print(zero_matrix([[1,2,3,0],[0,1,2,3],[1,1,1,1],[2,2,2,2]]))
+#[[0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 1, 0], [0, 2, 2, 0]]
+
+#1.9
+#method isSubstring which checks if one word is a substring of another. Given two strings, s1 and s2, write code
+#to chec if s2 is a rotation of s1 using only one call to isSustring(e.g, 'waterbottle' is a rotation of 'erbottlewat')
+def isSubstring(s1,s2):
+	if s2 in s1: return True
+	#the function checks if one word is a substring of another
+	return False
+
+def string_rotation(s1, s2):
+	#given two substrings
+	double_s1 = s1 + s1
+	return isSubstring(double_s1, s2)
+
+print(string_rotation('waterbottle','erbottlewat'))
