@@ -73,3 +73,10 @@ def flip_bit_to_win(real_num):
 print(flip_bit_to_win(72))
 print(flip_bit_to_win(12))
 print(flip_bit_to_win(1775))
+
+#5.4
+#Given a positive integer, print the next smallest and next largest number that have the same
+#number of 1 bits in their binary representation
+def Next_number(pos_int):
+	#12
+	
