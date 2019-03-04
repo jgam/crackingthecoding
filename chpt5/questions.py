@@ -79,4 +79,20 @@ print(flip_bit_to_win(1775))
 #number of 1 bits in their binary representation
 def Next_number(pos_int):
 	#12
-	
+	str_num = str(bin(pos_int)[2:])
+	str_reverse = str_num[::-1]
+	smallest = ''
+	biggest = ''
+	for i in range(len(str_reverse)):
+		if str_reverse[i] == '1':
+			smallest = str_reverse[:i-1]+'10'+ str_reverse[i+1:]
+			biggest += str_reverse[:i]+'01' + str_reverse[i+2:]
+			break
+		else:
+			continue
+
+	print(smallest[::-1])
+	print(biggest[::-1])
+	return "happy"
+
+print(Next_number(13))
