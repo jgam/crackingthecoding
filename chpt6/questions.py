@@ -56,3 +56,20 @@ print(sieve_of_erathosthenese(150))
 #6.3
 #Thsere is an 8x8 chessboard in which two diagonally opposite corners have been cut off. You are given 31 dominos, and a single domino can cover exactly two squares. Cna you use the 31 dominos to cover the entire board? Prove your answer.
 #-> my logic is that on chess board, we have 32 whites and 32 blacks. Because the dominoes always get 1 black and 1 white board. 31 dominoes will get 31 blacks and 31 whites rather than 30 blacks and 32 whites or vice versa.
+
+#6.4
+#There are three ants on different vertices of a triangle. What is the probability of collision if
+#they atart walking on the sides of the triangle?
+#in order for not to be collided, ants need to move in the same directions either forward or backward.
+#so there are total of 2 cases of not colliding and other than that, ants are colliding
+#therefore, total number of ants moving into certain directions are 2^3 and -2 to that gives
+#total number of ants colliding to each other.
+#formula goes -> (2^n-2)/2^n is the probability.
+
+#6.5
+#get 4 quart of jug when we have 3 quart and 5 quart jug
+#simple, fill up 3 quart and pour it to 5 quart. Fill 3 quart cup again, and pour to 5 quart jug until
+#its filled. Now you have 1 quart left in your 3 quart-cup. Throw away water in 5 quart cup and pour 1 quart of 3 quart cup to
+#5 quart cup. Finally, fill 3quart cup and pour it to 5 quart cup, you ahve 4 quart of water left.
+
+#6.6
