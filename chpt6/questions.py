@@ -16,7 +16,29 @@ def list_of_primes(num_list):
 					break
 	return ret_list
 
-print(list_of_primes(10000))
+#print(list_of_primes(10000))
+
+#번외
+def sieve_of_erathosthenese(limit):
+	basic_list = [1] * limit
+	basic_list[1] = 1
+	basic_list[2] = 1
+	prime_cond = False
+	prime_list = [2,3]
+	for i in range(4, limit+1):
+		for prime in prime_list:
+			if i % prime == 0:
+				prime_cond = False
+				break
+			else:
+				prime_cond = True
+				continue
+		if prime_cond:
+			prime_list.append(i)
+
+	return prime_list
+
+print(sieve_of_erathosthenese(150))
 
 #6.1
 #You have 20 bottles of pills. 19 bottles have 1.0gram pills, but one has pills of weight 1.1 grams. Given a scale that provdes an exact measurement, how would you find the heavy bottle? you can only use the scale once.
